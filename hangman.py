@@ -219,6 +219,7 @@ class Game(tk.Frame):
         
         if str(button_state) != 'disabled':
             self.button_list[index]['state'] = 'disabled'
+            self.focus_set()
             
             if letter in word:
                 for index, word_letter in enumerate(word):
@@ -331,8 +332,7 @@ class Game(tk.Frame):
         self.draw.goto(5, 35)
         self.draw.setheading(90)
         self.draw.pendown()
-        self.draw.circle(5, 180)
-        
+        self.draw.circle(5, 180)      
                         
 
 if __name__ == '__main__':
